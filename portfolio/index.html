@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #111827;
+      --accent: #2de7ee;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(17, 24, 39, 0.9);
+      padding: 12px 22px;
+      border-radius: 30px;
+      display: flex;
+      gap: 20px;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* SECTIONS */
+    section {
+      min-height: 7vh;
+      padding: 120px 5%;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hero img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      box-shadow: 0 0 30px rgba(34,211,238,0.4);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: var(--accent);
+      color: #020617;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(34,211,238,0.6);
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      color: #2de7ee;
+    }
+
+    .skill {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+      color: var(--accent);
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .project {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 18px;
+    }
+
+    .project h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+
+    /* CONTACT */
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav {
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      .hero {
+        text-align: center;
+      }
+    }
+  </style>
+
+
+   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top bar */
+    .top-bar {
+      width: 100%;
+      background-color: #111827; /* Dark background */
+      border-bottom: 2px solid white; /* White line at the bottom */
+      padding: 12px 20px;
+      position: fixed; /* Stay at the top */
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Name on the left */
+    .top-bar .name {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Optional: push content down so it doesn't hide under top bar */
+    .content {
+      margin-top: 60px; /* adjust based on top-bar height */
+      padding: 20px;
+    }
+   
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="FAHIM UR RAHMAN">PORTFOLIO</div>
+  </div>
+
+
+
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container hero">
+      <img src="SAVE_20260129_191433.jpg" alt="Profile Picture">
+
+      <div>
+        <h1>Hi, I'm Fahim Ur Rahman.</h1>
+        <h2>"Web Developer"</h2>
+        <p>
+          I build modern, responsive, and visually appealing websites.
+          Passionate about clean UI, performance, and learning new technologies.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <div class="project">
+          <div class="project-content">
+            <h3>Portfolio Website</h3>
+            <p>A modern personal portfolio built with HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <h3>GEAR UP FOOTBALL STORE</h3>
+            <p>Built a simple football products store using HTML and
+                 CSS as a beginner project to learn page structure and responsive styling.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact">
+      <h2>GET IN TOUCH</h2>
+      <p>Email: <a href="mailto:youremail@example.com">fahimse60@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/fahimse60-eng">github.com/fahimurrahman</a></p>
+      <p>Phone Number: <a href="#">03192307740</a></p>
+    </div>
+  </section>
+
+</body>
+</html>
